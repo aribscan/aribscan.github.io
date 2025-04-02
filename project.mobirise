@@ -1,0 +1,146 @@
+{
+  "settings": {
+    "name": "Aribscan",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.4,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.9.18",
+    "siteFonts": [],
+    "favicon": "@PROJECT_PATH@/assets/images/arbiscan-favicon.ico",
+    "robotsSwitcher": true,
+    "robotsText": "User-agent: *\nDisallow: /cgi-bin\nSitemap: https://aribscan.github.io/sitemap.xml/",
+    "sitemapSwitcher": true,
+    "siteUrl": "https://aribscan.github.io/",
+    "sitemapSwitcherAuto": "on",
+    "imageResize": false,
+    "usedWebp": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 2,
+    "versionPublish": "5.9.18"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Arbiscan - Arbitrum Explorer",
+        "meta_descr": "For Ethereum, Arbitrum One is a layer 2 scaling solution that makes transactions quick and cheap. On Arbitrum, you can look at the most recent blocks, transactions, tokens, NFTs, and resources...",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@bgColor",
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "img": {
+              "object-fit": "contain",
+              "border-radius": "0 !important"
+            }
+          },
+          "_name": "image04",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image03\" group=\"Image & Video\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Caption\" name=\"showText\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n\n    <div class=\"image-block m-auto\">\n        <a href=\"https://arbiscan.io/\"><img src=\"@PROJECT_PATH@/assets/images/arbiscan.png\" alt=\"Arbiscan\"></a>\n        <div mbr-if=\"showText\">\n            <p class=\"mbr-text mt-4 pb-4 align-center mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                Unlock your true path!\n            </p>\n        </div>\n    </div>\n</section>",
+          "_cid": "uHc4ZHzOWZ",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "image04-0"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor",
+              "@media (max-width: 767px)": {
+                "padding": "2rem 1.5rem"
+              },
+              "@media (min-width: 768px) and (max-width: 991px)": {
+                "padding": "2.25rem"
+              },
+              "@media (min-width: 992px)": {
+                "padding": "4rem"
+              }
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#000000"
+            }
+          },
+          "_name": "article07",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article07\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"10\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\">\n            <b><a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan - Arbitrum Explorer</a></b></h3>\n          <div class=\"row card-box align-left\">\n            \n            \n            \n            <div class=\"item features-without-image col-12 active\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Understanding <a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan</a>: The Blockchain Explorer for Arbitrum</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">In the world of blockchain technology, transparency and traceability are paramount. Blockchain explorers have become essential tools to help users track and verify transactions on various blockchain networks. Arbiscan is one such explorer, specifically designed for the Arbitrum network, a Layer 2 scaling solution built on top of Ethereum. Arbiscan allows users to view and interact with the Arbitrum blockchain in real time, making it a crucial tool for anyone engaging with this rapidly growing network.<br><br>In this article, we'll take a deeper dive into Arbiscan, how it works, its features, and why it's a vital tool for the Arbitrum ecosystem.<br><br>What is <a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan</a>?<br>Arbiscan is a block explorer for the Arbitrum network, which operates as a Layer 2 scaling solution for Ethereum. Layer 2 solutions are designed to improve the scalability and efficiency of blockchain networks without compromising their decentralization and security. Arbitrum achieves this by processing transactions off-chain (on secondary layers) while leveraging Ethereum’s security model.<br><br><a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan</a> serves as a user-friendly interface that allows people to explore all the activities on the Arbitrum blockchain. Whether you're a developer, investor, or blockchain enthusiast, Arbiscan provides a wealth of information to help you interact with the network, monitor transactions, and analyze the state of the blockchain.<br><br>Key Features of <a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan</a><br>1. Transaction Tracking<br>One of the primary functions of Arbiscan is allowing users to track and verify transactions on the Arbitrum network. By inputting a transaction hash (TXID), users can view detailed information about specific transactions, such as the sending and receiving addresses, gas fees, block number, timestamp, and status of the transaction (success or failure).<br><br>This feature ensures transparency, as it lets anyone verify the details of any transaction on the network.<br><br>2. Block Exploration<br><a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan</a> provides the ability to explore individual blocks on the Arbitrum blockchain. Each block contains a list of transactions, and users can delve into these blocks to analyze the sequence and distribution of activities. Users can see the block number, timestamp, the number of transactions in each block, and even the total gas used.<br><br>This level of detail makes it easy to monitor network congestion, transaction throughput, and overall system health.<br><br>3. Address Lookup<br>For anyone looking to track the activities of a particular address, <a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan</a> offers an address lookup feature. By entering a wallet address, users can see the history of all transactions involving that address, the token balances associated with it, and any smart contract interactions it’s been involved in.<br><br>This feature is particularly useful for traders, developers, and users who want to check the movements of funds or monitor contract activity.<br><br>4. Token Information<br>Arbiscan supports a wide range of tokens built on the Arbitrum network, and users can view detailed information about these tokens. For each token, Arbiscan displays its name, symbol, total supply, holders, and transaction history.<br><br>This is especially beneficial for users involved in decentralized finance (DeFi), as they can track token transfers, liquidity pools, and governance-related activities. Arbiscan also lets users see historical price movements for tokens, which is useful for portfolio management.<br><br>5. Smart Contract Interaction<br><a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan</a> provides a convenient interface for interacting with smart contracts deployed on Arbitrum. Users can connect their wallets and engage with various decentralized applications (dApps) directly from the explorer. You can view verified contract source codes, read contract functions, and even send transactions to interact with smart contracts.<br><br>This feature bridges the gap between the blockchain and the user interface, enabling users to seamlessly interact with decentralized protocols and services.<br><br>6. Arbitrum Network Stats<br>Arbiscan also provides insightful network statistics, such as the total number of transactions on the network, average gas costs, and transaction throughput. These statistics help users understand the performance and health of the Arbitrum network, aiding decision-making for both developers and investors.<br><br>Why is Arbiscan Important?<br>Arbiscan plays a crucial role in the Arbitrum ecosystem by providing a transparent and easy-to-use platform for tracking and analyzing blockchain activity. Here are a few reasons why <a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan</a> is so important:<br><br>Transparency and Trust<br>Blockchain explorers like Arbiscan increase the transparency of the Arbitrum network. Anyone can verify the status and details of transactions, making it easy to build trust in the network’s operations. This is particularly important for decentralized systems, where trust in central authorities is minimal.<br><br>Improved User Experience<br>By offering a simple yet comprehensive interface, Arbiscan makes it easy for users to navigate the Arbitrum blockchain. Whether you're a beginner or an advanced user, the platform provides all the information you need in a digestible format.<br><br>Decentralized Finance (DeFi) Monitoring<br>Arbiscan is indispensable for users who engage in DeFi on the Arbitrum network. Since most DeFi activities revolve around smart contracts, tokens, and transactions, Arbiscan enables users to monitor these activities in real time, ensuring transparency and helping users make informed decisions.<br><br>Developer Tools<br>For developers building on Arbitrum, Arbiscan is an essential tool for debugging, verifying contract deployments, and monitoring network performance. The ability to directly interact with smart contracts and view detailed transaction logs simplifies the development process and helps ensure the integrity of the deployed code.<br><br>How to Use <a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan</a><br>Using Arbiscan is relatively straightforward. Here’s a basic guide to getting started:<br><br>Visit the Website: Go to the Arbiscan website to begin exploring the Arbitrum blockchain.<br><br>Search for a Transaction or Address: To find a transaction, simply enter the transaction hash (TXID) into the search bar. To track an address, enter the wallet address in the search bar.<br><br>View Block Information: You can click on a block number to explore its contents, including the list of transactions, timestamp, and gas usage.<br><br>Check Token Balances and History: If you’re looking to check token balances, search for the token symbol or contract address to view all relevant data related to that specific token.<br><br>Explore Network Statistics: For a high-level overview of the network’s performance, visit the network stats section of Arbiscan to track the total transactions, gas costs, and more.<br><br>Conclusion<br>Arbiscan serves as the gateway to the Arbitrum blockchain, providing crucial insights and tools for users and developers alike. Whether you're tracking transactions, verifying smart contract interactions, or simply monitoring network health, Arbiscan is an essential resource in the growing Arbitrum ecosystem.<br><br>With its user-friendly interface, comprehensive data, and seamless integration with decentralized applications, Arbiscan continues to play a pivotal role in improving the overall user experience and ensuring transparency within the Arbitrum network. As more projects and users move to Arbitrum for faster and more cost-efficient transactions, tools like <a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan</a> will become even more critical for navigating the Layer 2 landscape.</p>\n              </div>\n            </div>\n          </div>\n          <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "uHc50kOdBI",
+          "_anchor": "article07-1",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
